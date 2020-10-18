@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ImageList = () => {
+const ImageList = (props) => {
     return <div>ImageList</div>;
 }
 
