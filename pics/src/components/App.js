@@ -3,7 +3,9 @@ import SearchBar from './SearchBar';
 
 const App = () => {
     return (
-        <SearchBar />
+        <div>
+            <SearchBar />
+        </div>
     );
 }
 
