@@ -1,7 +1,14 @@
+import { render } from '@testing-library/react';
 import React from 'react';
+import VideoItem from './VideoItem';
 
 const VideoList = ({ videos }) => {
-    return <div>{videos.length}</div>
+
+    const renderedList = videos.map((video) => {
+        return <VideoItem />;
+    });
+
+    return <div>{renderedList}</div>;
 }
 
 export default VideoList;
