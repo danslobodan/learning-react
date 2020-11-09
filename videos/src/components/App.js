@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import Spinner from './Spinner';
 
 class App extends React.Component {
 
@@ -34,6 +35,11 @@ class App extends React.Component {
     }
 
     render() {
+
+        if (!this.state.selectedVideo) {
+            return <Spinner />;
+        }
+
         return (
             <div className="ui container">
                 <SearchBar onFormSubmit={this.onTermSubmit} />
