@@ -36,7 +36,7 @@ const options = [
 export default () => {
     return (
         <div>
-            <Dropdown optoins={options} />
+            <Dropdown options={options} />
         </div>
     )
 };
