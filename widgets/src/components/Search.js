@@ -7,12 +7,8 @@ const Search = () => {
     const [results, setResults] = useState([]);
 
     useEffect(() => {
-
-        if (!term) {
-            return;
-        }
-
-        (async () => {
+        
+        const search = async () => {
             const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
                 params : {
                     action: 'query',
@@ -22,9 +18,13 @@ const Search = () => {
                     srsearch: term
                 }
             });
-
+            
             setResults(data.query.search);
-        })();
+        };
+
+        if (term) {
+            search();
+        }
         
     }, [term]);
 
