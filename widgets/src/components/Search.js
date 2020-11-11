@@ -31,11 +31,11 @@ const Search = () => {
                     <div className="header">
                         {results.title}
                     </div>
-                    {result.snippet}
+                    <span dangerouslySetInnerHTML={{ __html: result.snippet}} />
                 </div>
             </div>
         );
-    })
+    });
 
     return (
         <div>
