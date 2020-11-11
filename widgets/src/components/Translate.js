@@ -26,7 +26,8 @@ const Translate = () => {
             <Dropdown 
                 options={options} 
                 selected={language} 
-                onSelectedChange={setLanguage} 
+                onSelectedChange={setLanguage}
+                label="Select Language"
             />
         </div>
     );
