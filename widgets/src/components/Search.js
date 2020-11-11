@@ -8,6 +8,10 @@ const Search = () => {
 
     useEffect(() => {
 
+        if (!term) {
+            return;
+        }
+
         (async () => {
             const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
                 params : {
