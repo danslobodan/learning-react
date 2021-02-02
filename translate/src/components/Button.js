@@ -10,17 +10,21 @@ class Button extends React.Component {
             : 'Voorleggen';
     }
 
+    renderButton(color) {
+        return (
+            <button className={`ui button ${color}`}>
+                <LanguageContext.Consumer>
+                    {language => this.renderSubmit(language)}
+                </LanguageContext.Consumer>
+            </button>
+        )
+    }
+
     render() {
 
         return (
             <ColorContext.Consumer>
-                {color => 
-                    <button className={`ui button ${color}`}>
-                        <LanguageContext.Consumer>
-                            {language => this.renderSubmit(language)}
-                        </LanguageContext.Consumer>
-                    </button>
-                }
+                {color => this.renderButton(color)}
             </ColorContext.Consumer>
         )
     }
