@@ -7,7 +7,7 @@ class Field extends React.Component {
 
     render() {
 
-        const text = this.context === 'english'
+        const text = this.context.language === 'english'
             ? 'Name'
             : 'Naam';
 
